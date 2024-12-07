@@ -1,0 +1,168 @@
+.disabled {
+    position: absolute; 
+    width: 0; 
+    height: 0; 
+    visibility: hidden;
+    pointer-events: none;
+    top: -999px; 
+    left: -999px; 
+}
+
+.backdrop {
+    position: absolute; 
+    inset: 0 0 0 0; 
+    background-color: rgba(0, 0, 0, .6); 
+    z-index: 15; 
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.message-container {
+    margin: 35px 24px; 
+    background-color: white;
+    max-width: 540px; 
+}
+
+.message-container h2 {
+    background-color: #333d4b;
+    padding: 28px 24px; 
+    color: white; 
+}
+
+.message {
+    padding: 40px 24px; 
+}
+
+.text {
+    font-size: 16px; 
+    margin-top: 7px;
+    margin-bottom: 24px;  
+    line-height: 1.67; 
+    color: #333d4b; 
+    opacity: .7; 
+}
+
+.btn-container {
+    display: flex; 
+    position: relative; 
+    background-color: #0e8784;
+    transition: all 0.2s ease-in; 
+    cursor: pointer; 
+}
+
+.btn-container:hover {
+    background-color: #66d2cf;
+}
+
+.btn-container button {
+    width: 100%; 
+    padding: 16px 31px; 
+    border: none; 
+    cursor: pointer; 
+    display: relative; 
+    z-index: 4; 
+    background-color: transparent;
+    transition: all 0.2s ease-in; 
+}
+
+.btn-container button span {
+    opacity: 0; 
+}
+
+.price {
+    position: absolute; 
+    inset: 0 0 0 0; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    gap: 5px; 
+    font-size: 18px; 
+    line-height: 1.39; 
+    font-weight: bold; 
+}
+
+.success-message {
+    font-size: 24px; 
+    line-height: 1.67; 
+    font-weight: bold; 
+    color: #333d4b; 
+}
+
+.completed > div {
+    display: flex; 
+    justify-content: center;
+}
+
+.completed button {
+    border: none; 
+    background-color: #0e8784;
+    font-size: 18px; 
+    line-height: 1.39; 
+    padding: 15px 64px; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: all 0.2s ease-in; 
+}
+
+.completed button:hover {
+    background-color: #66d2cf;
+}
+
+
+@media screen and (min-width: 768px) {
+    .message-container {
+        margin-top: 100px; 
+    }
+    .message-container h2 {
+        padding: 42px 56px; 
+        font-size: 40px; 
+        line-height: 1.2; 
+    }
+    .message {
+        padding: 57px 56px; 
+    }
+    .btn-container {
+        background-color: unset;
+        gap: 13px; 
+    }
+    .price {
+        position: static; 
+        inset: unset; 
+        color: #333d4b; 
+        font-size: 32px; 
+        line-height: 1.25; 
+        font-size: bold; 
+    }
+    .price span {
+        visibility: hidden;
+        position: absolute; 
+        top: -999px; 
+        left: -999px; 
+        pointer-events: none;
+    }
+    .message-container button {
+        background-color: #0e8784;
+    }
+    .message-container button span {
+        opacity: 1; 
+        font-size: 18px; 
+        line-height: 1.39;
+        color: white;
+    }
+    .text {
+        margin-bottom: 47px; 
+    }
+    .btn-container:hover {
+        background-color: unset; 
+        cursor: initial; 
+    }
+    .btn-container button {
+        border-radius: 5px;
+    }
+    .btn-container button:hover {
+        background-color: #66d2cf;
+    }
+}

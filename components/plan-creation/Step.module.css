@@ -1,0 +1,63 @@
+.flex {
+    visibility: hidden;
+    pointer-events: none; 
+    width: 0; 
+    height: 0; 
+    position: absolute; 
+}
+
+@media screen and (min-width: 1110px) {
+    .flex {
+        display: flex; 
+        visibility:visible;
+        pointer-events: all; 
+        width: unset; 
+        height: unset; 
+        position: relative; 
+        font-size: 24px; 
+        line-height: 1.33; 
+        font-weight: bold; 
+        cursor: pointer; 
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.2s ease-in; 
+    }
+    .flex.complete, .flex:hover {
+        color: #333d4B; 
+    }
+    .flex.incomplete {
+        color: #83888F; 
+    }
+    .flex.incomplete:hover {
+        color: #333d4B; 
+    }
+    .flex.disabled {
+        color: #83888F; 
+        opacity: .3; 
+    }
+    .padding-both {
+        border-top: 1px solid lightgray; 
+        border-bottom: 1px solid lightgray; 
+        padding: 24px 0; 
+    }
+    .padding-top {
+        padding-top: 24px; 
+    }
+    .padding-bottom {
+        padding-bottom: 24px; 
+    }
+    .box {
+        position: absolute; 
+        visibility: none;
+        pointer-events: none;
+        width: 0; 
+        height: 0; 
+    }
+    .backdrop {
+        position: absolute; 
+        inset: 0 0 0 0; 
+        z-index: 15; 
+        cursor:initial 
+    }
+}
+

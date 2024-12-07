@@ -1,0 +1,29 @@
+.summary {
+    font-size: 24px; 
+    line-height: 1.67; 
+    font-weight: bold; 
+}
+
+.modal {
+    color: #83888f; 
+}
+
+.not-modal {
+    color: white; 
+}
+
+.is-filter {
+    display: inline; 
+}
+
+.choice {
+    color: #0e8784; 
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1110px) {
+
+}

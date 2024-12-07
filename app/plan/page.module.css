@@ -1,0 +1,86 @@
+.hero {
+    position: relative; 
+    margin: 0 24px 120px;
+    padding: 101px 24px 136px; 
+    text-align: center;
+    color: white; 
+    border-radius: 15px; 
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 40px; 
+    padding-bottom: 24px; 
+}
+
+.hero p {
+    font-size: 15px; 
+    line-height: 1.67; 
+    opacity: .6; 
+}
+
+.hero picture {
+    z-index: -1; 
+    position: absolute; 
+    inset: 0 0 0 0; 
+}
+
+.backdrop {
+    position: absolute; 
+    inset: 0 0 0 0; 
+    background-color: black;
+    opacity: .3; 
+    z-index: -1; 
+}
+
+.create-plan {
+    margin: 0 24px 120px; 
+}
+.how-it-works {
+    margin-bottom: 120px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        text-align: left; 
+        padding: 118px 53px; 
+        margin: 0 40px 144px;
+    }
+    .hero .text {
+        max-width: 398px; 
+    }
+    .hero h1 {
+        font-size: 48px; 
+    }
+    .backdrop {
+        visibility: hidden; 
+        pointer-events: none;
+        width: 0; 
+        height: 0; 
+    }
+    .create-plan {
+        margin: 0 40px 144px; 
+    }
+    .how-it-works {
+        margin-bottom: 144px
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .create-plan {
+        max-width: 1110px; 
+        margin: 0 auto 264px; 
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero {
+        max-width: 1280px; 
+        margin: 0 auto 168px; 
+        padding: 137px 85px; 
+    }
+    .how-it-works {
+        max-width: 1280px; 
+        margin: 0 auto 168px; 
+    }
+}

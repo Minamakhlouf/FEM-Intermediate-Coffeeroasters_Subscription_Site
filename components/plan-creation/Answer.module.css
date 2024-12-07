@@ -1,0 +1,44 @@
+.answer {
+    padding: 24px; 
+    display: flex; 
+    flex-direction: column;
+    gap: 8px; 
+    background-color: #f4f1eb;
+    cursor: pointer; 
+    border-radius: 15px; 
+    transition: all 0.2s ease; 
+    color: #333d4b; 
+}
+
+.answer:hover {
+    background-color: #fdd6ba;
+}
+
+.answer h3 {
+    font-size: 24px; 
+    line-height: 1.25; 
+}
+
+.answer p {
+    font-size: 16px; 
+    line-height: 1.625; 
+    opacity: .7; 
+}
+
+.answer.selected {
+    background-color: #0e8784;
+}
+
+.answer.selected h3 {
+    color: white; 
+}
+
+.answer.selected p {
+    color: white; 
+}
+
+@media screen and (min-width: 768px) {
+    .answer {
+        padding: 32px 28px 84px; 
+    }
+}

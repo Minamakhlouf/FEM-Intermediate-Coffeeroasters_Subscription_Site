@@ -1,0 +1,112 @@
+.flex-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 56px; 
+    padding: 80px 24px; 
+}
+
+.flex-container.dark {
+    background-color: #2c343e;
+    border-radius: 10px; 
+}
+
+.flex-item {
+    display: flex; 
+    flex-direction: column;
+    gap: 24px; 
+}
+
+.flex-item h2 {
+    display: flex; 
+    flex-direction: column;
+    gap: 24px; 
+    align-items: center;
+    font-size: 28px; 
+    line-height: 1.14; 
+}
+
+.flex-item h2 span {
+    font-size: 72px; 
+    line-height: 1; 
+    color: #fdd6ba
+}
+
+.flex-item p {
+    font-size: 15px; 
+    line-height: 1.67; 
+    text-align: center; 
+    opacity: .7; 
+}
+
+.flex-item h2.light, .flex-item p.light {
+    color: #333d48; 
+}
+
+.flex-item h2.dark, .flex-item p.dark {
+    color: white; 
+}
+
+@media screen and (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+        gap: 0; 
+        padding: 56px 40px 44px; 
+    }
+    .flex-item {
+        padding-right: 20px; 
+        position: relative; 
+        padding-top: 62px; 
+    }
+    .flex-item h2, .flex-item p {
+        text-align: start; 
+        align-items: start;
+    }
+    .flex-item h2 {
+        width: 80%; 
+    }
+    .circle {
+        width: 32px; 
+        height: 32px; 
+        border: 1px solid #0e8784; 
+        border-radius: 50%; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        transform: translateY(-50%); 
+        background-color: white;
+        z-index: 6; 
+    }
+    .line {
+        height: 1px; 
+        width: 100%; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        transform: translatex(16px); 
+        background-color: #fdd6ba;  
+        z-index: 4; 
+    }
+    .circle.dark {
+        background-color: transparent;
+    }
+    .line.dark {
+        z-index: 8; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .flex-container {
+        padding: 100px 85px; 
+    }
+    .flex-item {
+        padding-right: 95px; 
+    }
+    .flex-item h2 {
+        font-size: 32px; 
+        line-height: 1.125; 
+    }
+    .flex-item p {
+        font-size: 16px; 
+        line-height: 1.625; 
+    }
+}

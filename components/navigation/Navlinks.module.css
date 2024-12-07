@@ -1,0 +1,87 @@
+.btn-container {
+    width: 20px; 
+    height: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none; 
+    cursor: pointer; 
+}
+
+.modal {
+    position: absolute;  
+    inset: 90px 0 0 0; 
+    z-index: -4; 
+    background-color: rgba(255, 255, 255, .6); 
+    transform: translatey(-120%); 
+    transition: all 0.2s ease-in-out; 
+}
+
+.modal.isShown {
+    transform: translateY(0); 
+    z-index: 4; 
+}
+
+.mobile-links {
+    display: flex; 
+    flex-direction: column;
+    gap: 32px; 
+    padding: 40px; 
+    align-items: center;
+    background-color: white;
+    opacity: 1; 
+    z-index: 5; 
+    position: relative; 
+}
+
+.link {
+    text-decoration: none;
+    color: #33334b; 
+    font-size: 24px; 
+    line-height: 1.33; 
+    font-weight: bold; 
+}
+
+.normal-links {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute; 
+}
+
+@media screen and (min-width: 768px) {
+    .normal-links {
+        position: static; 
+        visibility: visible;
+        pointer-events: all;
+        display: flex; 
+        gap: 32px; 
+        align-items: center;
+    }
+    .normal-links .link {
+        font-size: 12px; 
+        line-height: 1.25; 
+        letter-spacing: 0.92px;
+    }
+    .normal-links .link:hover, .normal-links .link:focus, .normal-links .link.active {
+        color: #0e8784; 
+        font-weight: bold; 
+    }
+    .btn-container {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute; 
+    }
+    .modal {
+        visibility: hidden;
+        pointer-events: none;
+        width: 0; 
+        height: 0; 
+    }
+    .modal.isShown {
+        visibility: hidden;
+        pointer-events: none;
+        width: 0; 
+        height: 0; 
+    }
+}
